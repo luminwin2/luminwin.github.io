@@ -1,0 +1,12 @@
+pandoc: 2.7.3
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  BST625: BST625.html
+  cv: cv.html
+  teach2: teach2.html
+last_built: 2021-08-23T21:43Z
+urls:
+  reference: https://luminwin.github.io/Lu//reference
+  article: https://luminwin.github.io/Lu//articles
+
