@@ -1,0 +1,6 @@
+@misc{HemantVIMP,
+	author = "Hemant Ishwaran and Min Lu and Udaya B. Kogalur",
+	title = {{randomForestSRC}: variable importance {(VIMP)} with subsampling inference vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/rfsrc-subsample.html}
+}

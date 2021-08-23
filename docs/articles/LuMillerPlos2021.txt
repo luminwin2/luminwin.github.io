@@ -1,0 +1,13 @@
+@article{LuMillerPlos2021,
+	doi = {10.1371/journal.pone.0254519},
+	author = {Lu, Min AND Parel, Jean-Marie AND Miller, Darlene},
+	journal = {PLOS ONE},
+	publisher = {Public Library of Science},
+	title = {Interactions between staphylococcal enterotoxins A and D and superantigen-like proteins 1 and 5 for predicting methicillin and multidrug resistance profiles among Staphylococcus aureus ocular isolates},
+	year = {2021},
+	month = {07},
+	volume = {16},
+	url = {https://doi.org/10.1371/journal.pone.0254519},
+	pages = {1-18},
+	number = {7},
+}

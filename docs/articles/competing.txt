@@ -1,0 +1,6 @@
+@misc{HemantCompeting,
+	author = "Hemant Ishwaran and Thomas A. Gerds and Bryan M. Lau and Min Lu and Udaya B. Kogalur",
+	title = {{randomForestSRC}: competing risks vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/competing.html}
+}

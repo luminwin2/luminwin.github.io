@@ -1,0 +1,13 @@
+@inbook{IshwaranLuRSF,
+	author = {Ishwaran, Hemant and Lu, Min},
+	publisher = {American Cancer Society},
+	isbn = {9781118445112},
+	title = {Random Survival Forests},
+	booktitle = {Wiley StatsRef: Statistics Reference Online},
+	chapter = {},
+	pages = {1-13},
+	doi = {https://doi.org/10.1002/9781118445112.stat08188},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat08188},
+	eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118445112.stat08188},
+	year = {2019}
+}

@@ -1,0 +1,6 @@
+@misc{HemantGettingStarted,
+	author = "Hemant Ishwaran and Min Lu and Udaya B. Kogalur",
+	title = {{randomForestSRC}: getting started with {randomForestSRC} vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/getstarted.html}
+}

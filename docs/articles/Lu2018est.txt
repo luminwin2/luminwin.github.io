@@ -1,0 +1,7 @@
+@phdthesis{Lu2018est,
+	title    = {Estimating Individual Treatment Effect in Observational Data Using Random Forest Methods},
+	school   = {University of Miami},
+	author   = {Lu, Min},
+	year     = {2018},
+	type     = {{PhD} dissertation}
+}

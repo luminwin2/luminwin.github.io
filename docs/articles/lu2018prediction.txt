@@ -1,0 +1,22 @@
+@article{lu2018prediction,
+	title={A prediction-based alternative to P values in regression models},
+	author={Lu, Min and Ishwaran, Hemant},
+	journal={The Journal of thoracic and cardiovascular surgery},
+	volume={155},
+	number={3},
+	pages={1130},
+	year={2018},
+	publisher={NIH Public Access}
+	doi = {DOI:https://doi.org/10.1016/j.jtcvs.2017.08.056},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0022522317318184}
+}
+
+@misc{lu2017machine,
+	title={A Machine Learning Alternative to P-values}, 
+	author={Min Lu and Hemant Ishwaran},
+	year={2017},
+	eprint={1701.04944},
+	archivePrefix={arXiv},
+	primaryClass={stat.ML},
+	url = {https://arxiv.org/abs/1701.04944}
+}

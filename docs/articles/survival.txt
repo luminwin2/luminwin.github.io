@@ -1,0 +1,7 @@
+@misc{HemantRandomS,
+	author = "Hemant Ishwaran and Michael S. Lauer and Eugene H. Blackstone and Min Lu 
+	and Udaya B. Kogalur",
+	title = {{randomForestSRC}: random survival forests vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/survival.html}
+}

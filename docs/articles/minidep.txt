@@ -1,0 +1,7 @@
+@misc{HemantMinimal,
+	author = "Hemant Ishwaran and Xi Chen and Andy J. Minn and Min Lu and Michael S. Lauer 
+	and Udaya B. Kogalur",
+	title = {{randomForestSRC}: minimal depth vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/minidep.html}
+}
