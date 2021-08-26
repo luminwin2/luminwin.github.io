@@ -320,5 +320,6 @@
 	school   = {University of Miami},
 	author   = {Lu, Min},
 	year     = {2018},
+        doi = {https://doi.org/10.33596/etd-1},
 	type     = {{PhD} dissertation},
 }
