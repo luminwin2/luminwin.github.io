@@ -2,7 +2,7 @@
 #  Wecome to Min Lu's personal website!
 
 
-#### Field of Interest: Machine Learning, Causal Inference, Variable Selection, Compartmental Models, Infectious Diseases, Statistical Genomics, Cancer Genomics
+#### Field of Interest: Machine Learning, Causal Inference, Variable Selection, Compartmental Models, Infectious Diseases, Statistical Genomics, Meta-Analysis
 
 ### Bio
 

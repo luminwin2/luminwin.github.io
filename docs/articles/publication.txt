@@ -185,12 +185,12 @@
 	title={Dynamic Modeling COVID-19 for Comparing Containment Strategies in a Pandemic Scenario},
 	author={Lu, Min},
 	journal={Annals of Biostatistics \& Biometric Application},
-	volume={3},
-	number={4},
+	volume={4},
+	number={1},
 	pages={1--4},
 	year={2020},
 	url ={https://arxiv.org/abs/2003.13997v2},
-	doi ={10.33552/ABBA.2020.03.000579},
+	doi ={10.33552/ABBA.2020.04.000579},
 	publisher={Iris Publishers}
 }
 
@@ -220,6 +220,18 @@
 	eprint = { 
 	https://doi.org/10.1080/10705511.2016.1230721	
 	}	
+}
+
+@Manual{REREFACT,
+	author = {Soyeon Ahn and Cengiz Zopluoglu and Seniz Celimli and Min Lu and Nicholas D. Myers},
+	title = {Reordering and/or Reflecting Factors for Simulation Studies With Exploratory Factor Analysis},
+        publisher = {manual},
+	year = {2016},
+	note = {R package version 1.0},
+	url = {https://cran.r-project.org/package=REREFACT},
+	pdf =
+	{https://cran.r-project.org/web/packages/REREFACT/REREFACT.pdf}
+
 }
 
 

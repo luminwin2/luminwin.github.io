@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Covid-19 Prediction Model -- Role: developer — COVID-19_R_Shiny_Software (2020) • Min Lu</title>
+<title>REordering and/or REflecting FACTors for EFA simulations   
+-- Role: coauthor — REREFACT_R_package (2016) • Min Lu</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +47,11 @@
 
 
 
-<meta property="og:title" content="Covid-19 Prediction Model -- Role: developer — COVID-19_R_Shiny_Software (2020)" />
+<meta property="og:title" content="REordering and/or REflecting FACTors for EFA simulations   
+-- Role: coauthor — REREFACT_R_package (2016)" />
+<meta property="og:description" content="Download the package via https://cran.r-project.org/web/packages/REREFACT/
+
+The REREFACT package is an open source package for R (R Development Core Team, 2015), which provides user-defined functions for accessing a post-rotation algorithm that REorders and/or REflects FACTors for each replication of a simulation study with exploratory factor analysis (EFA)." />
 <meta property="og:image" content="https://luminwin.github.io/Lu/articles/cv.html/logo.svg" />
 
 
@@ -171,26 +176,33 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Covid-19 Prediction Model -- Role: developer</h1>
+    <h1>REordering and/or REflecting FACTors for EFA simulations   
+-- Role: coauthor</h1>
     
-    <div class="hidden name"><code>covid.Rd</code></div>
+    <div class="hidden name"><code>REREFACT.Rd</code></div>
     </div>
 
     <div class="ref-description">
+    <p>Download the package via <a href='https://cran.r-project.org/web/packages/REREFACT/'>https://cran.r-project.org/web/packages/REREFACT/</a></p>
+
+<p>The REREFACT package is an open source package for R (R Development Core Team, 2015), which provides user-defined functions for accessing a post-rotation algorithm that REorders and/or REflects FACTors for each replication of a simulation study with exploratory factor analysis (EFA).</p>
     </div>
 
 
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Lu M. and Ishwaran H. (2021). Cure and death play a role in understanding dynamics for COVID-19: Data-driven competing risk compartmental models, with and without vaccination. PLoS ONE 16(7): e0254397. https://doi.org/10.1371/journal.pone.0254397</p> 
-<p>Lu M. (2020). 
-Dynamic Modeling COVID-19 for Comparing Containment Strategies in a Pandemic Scenario.
-Annals of Biostatistics &amp; Biometric Applications 4, 1-4. http://dx.doi.org/10.17613/9917-pz03</p>
-<p>Predicting for your own region
-<a href='https://minlu.shinyapps.io/killCOVID19/'>https://minlu.shinyapps.io/killCOVID19/</a></p>
-<p>Dashboard
-<a href='https://minlu.shinyapps.io/killCOVID19map/'>https://minlu.shinyapps.io/killCOVID19map/</a></p>
+    <p>The purpose of REREFACT is to provide a general algorithm written in freely available software, R, dedicated to addressing the possibility that a non-uniform order and/or sign pattern of the factors may be observed across replications of a simulation study with exploratory factor analysis. The algorithm implemented in REREFACT proceeds in four steps. Step 1 determines the total number of equivalent forms, I, of the vector of factors, eta. Step 2 indexes, i=1,2,..., I, each equivalent form of eta (i.e., eta_i) via a unique permutation matrix, P (i.e., P_i). Step 3 determines which eta_i each replication follows. Step 4 uses the appropriate P_i to reorder and/or re-sign parameter estimates within each replication so that all replications uniformly follow the order and sign pattern defined by the population values. REREFACT is important because simulation studies that combine parameter estimates across replications where the factors do not uniformly follow the order and/or sign pattern defined by the population values may yield misleading results for outcomes commonly of interest in these studies.</p>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+
+    <p>Soyeon Ahn, Cengiz Zopluoglu, Seniz Celimli, Min Lu, &amp; Nicholas D. Myers; 
+Maintainer: Soyeon Ahn &lt;s.ahn@miami.edu&gt;</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Myers, N. D., Ahn, S., Lu, M., Celimli, S., Zopluoglu, C. (2016). REREFACT: An R package for reordering and reflecting factors for simulation studies with Exploratory Factor Analysis. Manuscript submitted for publication.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code>rerefact</code>, <code>correct_alpha</code>, <code>correct_beta</code>, <code>correct_lambda</code>, <code>correct_psi</code>, <code>correct_gamma</code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
