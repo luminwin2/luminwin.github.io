@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Variances and Covariances for Multivariate Meta-Analysis -- Role: developer — metavcov_R_Package (2017-now) • Min Lu</title>
+<title>Computing Within-Study Variances and Covariances, Visualization and Missing Data Solution for Multivariate Meta-Analysis -- Role: developer — metavcov_R_Package (2017-now) • Min Lu</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,10 +46,10 @@
 
 
 
-<meta property="og:title" content="Variances and Covariances for Multivariate Meta-Analysis -- Role: developer — metavcov_R_Package (2017-now)" />
+<meta property="og:title" content="Computing Within-Study Variances and Covariances, Visualization and Missing Data Solution for Multivariate Meta-Analysis -- Role: developer — metavcov_R_Package (2017-now)" />
 <meta property="og:description" content="Download the package via https://cran.r-project.org/web/packages/metavcov/
 Find Website and Vignettes via https://luminwin.github.io/metavcov/articles/intro.html
-R package metavov computes variances and covariances for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD)." />
+The package metavcov computes variances and covariances for effect sizes as preparations for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD). Functions for plotting confidence intervals and multiple imputation for missing data are offered. It can fit a fixed-effect model for demonstration purposes; users are highly encouraged to use packages mvmeta and metaSEM for random-effect models." />
 <meta property="og:image" content="https://luminwin.github.io/Lu/articles/cv.html/logo.svg" />
 
 
@@ -174,7 +174,7 @@ R package metavov computes variances and covariances for multivariate meta-analy
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Variances and Covariances for Multivariate Meta-Analysis -- Role: developer</h1>
+    <h1>Computing Within-Study Variances and Covariances, Visualization and Missing Data Solution for Multivariate Meta-Analysis -- Role: developer</h1>
     
     <div class="hidden name"><code>metavcov-package.Rd</code></div>
     </div>
@@ -182,7 +182,7 @@ R package metavov computes variances and covariances for multivariate meta-analy
     <div class="ref-description">
     <p>Download the package via <a href='https://cran.r-project.org/web/packages/metavcov/'>https://cran.r-project.org/web/packages/metavcov/</a></p>
 <p>Find Website and Vignettes via <a href='https://luminwin.github.io/metavcov/articles/intro.html'>https://luminwin.github.io/metavcov/articles/intro.html</a></p>
-<p>R package metavov computes variances and covariances for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD).</p>
+<p>The package <span class="pkg">metavcov</span> computes variances and covariances for effect sizes as preparations for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD). Functions for plotting confidence intervals and multiple imputation for missing data are offered. It can fit a fixed-effect model for demonstration purposes; users are highly encouraged to use packages <code>mvmeta</code> and <code>metaSEM</code> for random-effect models.</p>
     </div>
 
 
@@ -194,26 +194,125 @@ R package metavov computes variances and covariances for multivariate meta-analy
 
     <p>Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. &amp; Celimli, S. (2016). Application of meta-analysis in sport and exercise science. In N. Ntoumanis, &amp; N. Myers (Eds.), <em>An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists</em> (pp.233-253). Hoboken, NJ: John Wiley and Sons, Ltd.</p>
 <p>Olkin, I., &amp; Ishii, G. (1976). Asymptotic distribution of functions of a correlation matrix. In S. Ikeda (Ed.), <em>Essays in probability and statistics: A volume in honor of Professor Junjiro Ogawa</em> (pp.5-51). Tokyo, Japan: Shinko Tsusho.</p>
+<p>B. J. Becker. (2009) Model-based meta-analysis. In H. Cooper, L. V. Hedges, and J. C. Valentine, (Ed.), <em>The handbook of research synthesis and meta-analysis</em>, chapter 20, pages 377-395. Russell Sage Foundation.</p>
 <p>Wei, Y., &amp;  Higgins, J. (2013). Estimating within study covariances in multivariate meta-analysis with multiple outcomes. <em>Statistics in Medicine, 32</em>(7), 119-1205.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'>###############################################</span>
-<span class='co'># Effect size : correlation coefficients</span>
+    <pre class="examples"><span class='co'># \donttest{</span>
+<span class='co'>###############################################</span>
+<span class='co'># Effect size: correlation coefficients</span>
 <span class='co'>###############################################</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Craft2003</span><span class='op'>)</span>
-<span class='va'>computvocv</span> <span class='op'>&lt;-</span> <span class='fu'>r.vcov</span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>N</span>,
-                  corflat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Craft2003</span>, select <span class='op'>=</span> <span class='va'>C1</span><span class='op'>:</span><span class='va'>C6</span><span class='op'>)</span>,
-                  method <span class='op'>=</span> <span class='st'>"average"</span><span class='op'>)</span>
-<span class='co'># name transformed z scores as an input</span>
-<span class='va'>Input</span> <span class='op'>&lt;-</span> <span class='va'>computvocv</span><span class='op'>$</span><span class='va'>zr</span>
-<span class='co'># name variance covariance matrix of trnasformed z scores as covars</span>
-<span class='va'>covars</span> <span class='op'>&lt;-</span> <span class='va'>computvocv</span><span class='op'>$</span><span class='va'>zcov</span>
-<span class='co'># Next step: Overall analysis: Running random effects model</span>
-<span class='co'>#                              using package "mvmeta"</span>
+<span class='co'># extract correlation from the dataset (craft)</span>
+<span class='va'>corflat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Craft2003</span>, select<span class='op'>=</span><span class='va'>C1</span><span class='op'>:</span><span class='va'>C6</span><span class='op'>)</span>
+<span class='co'># transform correlations to z and compute variance-covariance matrix.</span>
+<span class='va'>computvcov</span> <span class='op'>&lt;-</span> <span class='fu'>r.vcov</span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>N</span>, corflat <span class='op'>=</span> <span class='va'>corflat</span>, method <span class='op'>=</span> <span class='st'>"average"</span><span class='op'>)</span>
+<span class='co'># name transformed z scores as y</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>ef</span>
+<span class='co'># name variance-covariance matrix of trnasformed z scores as S</span>
+<span class='va'>S</span> <span class='op'>&lt;-</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>matrix.vcov</span>
+<span class='va'>S</span><span class='op'>[</span><span class='fl'>1</span>, <span class='op'>]</span>
+<span class='co'>## fixed-effect model</span>
+<span class='va'>MMA_FE</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'>metafixed</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>y</span>, Slist <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>list.vcov</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>MMA_FE</span>
+<span class='co'># Restricted maximum likelihood (REML) estimator from the mvmeta package</span>
 <span class='co'>#library(mvmeta)</span>
 <span class='co'>#mvmeta_RE &lt;- summary(mvmeta(cbind(C1, C2, C3, C4, C5, C6),</span>
-<span class='co'>#                           S = covars, data = Input, method = "reml"))</span>
+<span class='co'>#                           S = S, data = y, method = "reml"))</span>
 <span class='co'>#mvmeta_RE</span>
+
+<span class='co'># maximum likelihood estimators from the metaSEM package</span>
+<span class='co'># library(metaSEM)</span>
+<span class='co'># metaSEM_RE &lt;- summary(meta(y = y, v = S))</span>
+<span class='co'># metaSEM_RE</span>
+<span class='co'># Plotting the result:</span>
+<span class='va'>obj</span> <span class='op'>&lt;-</span> <span class='va'>MMA_FE</span>
+<span class='co'># obj &lt;- mvmeta_RE</span>
+<span class='co'># obj &lt;- metaSEM_RE</span>
+<span class='co'># pdf("CI.pdf", width = 4, height = 7)</span>
+<span class='fu'>plotCI</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>ef</span>, v <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>list.vcov</span>,
+        name.y <span class='op'>=</span> <span class='cn'>NULL</span>, name.study <span class='op'>=</span> <span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>ID</span>,
+        y.all <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>,
+        y.all.se <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+<span class='co'># dev.off()</span>
+<span class='co'>#########################################################################</span>
+<span class='co'># Other effect sizes of the same or different type</span>
+<span class='co'># Choose variable SBP, DBP, DD, D with effect sizes "MD","MD","RD","lgOR"</span>
+<span class='co'>#########################################################################</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Geeganage2010</span><span class='op'>)</span>
+<span class='co'>## set the correlation coefficients list r</span>
+<span class='va'>r12</span> <span class='op'>&lt;-</span> <span class='fl'>0.71</span>
+<span class='va'>r13</span> <span class='op'>&lt;-</span> <span class='fl'>0.5</span>
+<span class='va'>r14</span> <span class='op'>&lt;-</span> <span class='fl'>0.25</span>
+<span class='va'>r23</span> <span class='op'>&lt;-</span> <span class='fl'>0.6</span>
+<span class='va'>r24</span> <span class='op'>&lt;-</span> <span class='fl'>0.16</span>
+<span class='va'>r34</span> <span class='op'>&lt;-</span> <span class='fl'>0.16</span>
+<span class='va'>r</span> <span class='op'>&lt;-</span> <span class='fu'>vecTosm</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>r12</span>, <span class='va'>r13</span>, <span class='va'>r14</span>, <span class='va'>r23</span>, <span class='va'>r24</span>, <span class='va'>r34</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>r</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>1</span>
+<span class='va'>mix.r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>Geeganage2010</span><span class='op'>)</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>i</span><span class='op'>)</span><span class='op'>{</span><span class='va'>r</span><span class='op'>}</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/attach.html'>attach</a></span><span class='op'>(</span><span class='va'>Geeganage2010</span><span class='op'>)</span>
+<span class='co'>## compute variance co-variances</span>
+<span class='va'>computvcov</span> <span class='op'>&lt;-</span> <span class='fu'>mix.vcov</span><span class='op'>(</span>type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"MD"</span>, <span class='st'>"MD"</span>, <span class='st'>"RD"</span>, <span class='st'>"lgOR"</span><span class='op'>)</span>,
+                       d <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>MD_SBP</span>, <span class='va'>MD_DBP</span>, <span class='cn'>NA</span>, <span class='cn'>NA</span><span class='op'>)</span>,
+                       sdt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>sdt_SBP</span>, <span class='va'>sdt_DBP</span>, <span class='cn'>NA</span>, <span class='cn'>NA</span><span class='op'>)</span>,
+                       sdc <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>sdc_SBP</span>, <span class='va'>sdc_DBP</span>, <span class='cn'>NA</span>, <span class='cn'>NA</span><span class='op'>)</span>,
+                       nt <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>nt_SBP</span>, <span class='va'>nt_DBP</span>, <span class='va'>nt_DD</span>, <span class='va'>nt_D</span><span class='op'>)</span>,
+                       nc <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>nc_SBP</span>, <span class='va'>nc_DBP</span>, <span class='va'>nc_DD</span>, <span class='va'>nc_D</span><span class='op'>)</span>,
+                       st <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='cn'>NA</span>, <span class='va'>st_DD</span>, <span class='va'>st_D</span><span class='op'>)</span>,
+                       sc <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='cn'>NA</span>, <span class='va'>sc_DD</span>, <span class='va'>sc_D</span><span class='op'>)</span>,
+                       r <span class='op'>=</span> <span class='va'>mix.r</span>,
+                       name <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"MD.SBP"</span>, <span class='st'>"MD.DBP"</span>, <span class='st'>"RD.DD"</span>, <span class='st'>"lgOR.D"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='co'># save different effect sizes in y</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>ef</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
+<span class='co'># save variances and covariances of all the effect sizes in a matrix S</span>
+<span class='va'>S</span> <span class='op'>&lt;-</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>matrix.vcov</span>
+<span class='va'>S</span><span class='op'>[</span><span class='fl'>1</span>, <span class='op'>]</span>
+<span class='co'>## fixed-effect model</span>
+<span class='va'>MMA_FE</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'>metafixed</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>y</span>, Slist <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>list.vcov</span><span class='op'>)</span><span class='op'>)</span>
+<span class='co'># Restricted maximum likelihood (REML) estimator from the mvmeta package</span>
+<span class='co'># library(mvmeta)</span>
+<span class='co'># mvmeta_RE &lt;- summary(mvmeta(cbind(MD.SBP, MD.DBP, RD.DD, lgOR.D) ~.,</span>
+<span class='co'>#                            S = S, data = y, method = "reml"))</span>
+<span class='co'># mvmeta_RE</span>
+
+<span class='co'># maximum likelihood estimators from the metaSEM package</span>
+<span class='co'># library(metaSEM)</span>
+<span class='co'># metaSEM_RE &lt;- summary(meta(y = y, v = S))</span>
+<span class='co'># metaSEM_RE</span>
+<span class='co'># Plotting the result:</span>
+<span class='va'>obj</span> <span class='op'>&lt;-</span> <span class='va'>MMA_FE</span>
+<span class='co'># obj &lt;- mvmeta_RE</span>
+<span class='co'># obj &lt;- metaSEM_RE</span>
+<span class='co'># pdf("CI.pdf", width = 4, height = 7)</span>
+<span class='fu'>plotCI</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>ef</span>, v <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>list.vcov</span>,
+        name.y <span class='op'>=</span> <span class='cn'>NULL</span>, name.study <span class='op'>=</span> <span class='va'>Geeganage2010</span><span class='op'>$</span><span class='va'>studyID</span>,
+        y.all <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>,
+        y.all.se <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>]</span>,
+        hline <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='co'># dev.off()</span>
+<span class='co'>#####################################################################################</span>
+<span class='co'># Multiple Imputation for missing data</span>
+<span class='co'>#####################################################################################</span>
+<span class='co'># prepare a dataset with missing values and input arguments for meta.mi</span>
+<span class='va'>Craft2003.mnar</span> <span class='op'>&lt;-</span> <span class='va'>Craft2003</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>Craft2003.mnar</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>C4</span> <span class='op'>&lt;</span> <span class='fl'>0</span><span class='op'>)</span>, <span class='fl'>6</span><span class='op'>)</span>, <span class='st'>"C4"</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>Craft2003.mnar</span>
+<span class='va'>n.name</span> <span class='op'>&lt;-</span> <span class='st'>"N"</span>
+<span class='va'>ef.name</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"C1"</span>, <span class='st'>"C2"</span>, <span class='st'>"C3"</span>, <span class='st'>"C4"</span>, <span class='st'>"C5"</span>, <span class='st'>"C6"</span><span class='op'>)</span>
+<span class='co'># fixed-effect model</span>
+<span class='va'>obj</span> <span class='op'>&lt;-</span> <span class='fu'>metami</span><span class='op'>(</span><span class='va'>dat</span>, M <span class='op'>=</span> <span class='fl'>2</span>, vcov <span class='op'>=</span> <span class='st'>"r.vcov"</span>,
+             <span class='va'>n.name</span>, <span class='va'>ef.name</span>,
+             func <span class='op'>=</span> <span class='st'>"metafixed"</span><span class='op'>)</span>
+<span class='co'># Plotting the result</span>
+<span class='va'>computvcov</span> <span class='op'>&lt;-</span> <span class='fu'>r.vcov</span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>N</span>,
+                     corflat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Craft2003.mnar</span>, select <span class='op'>=</span> <span class='va'>C1</span><span class='op'>:</span><span class='va'>C6</span><span class='op'>)</span>,
+                     method <span class='op'>=</span> <span class='st'>"average"</span><span class='op'>)</span>
+<span class='fu'>plotCI</span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>ef</span>, v <span class='op'>=</span> <span class='va'>computvcov</span><span class='op'>$</span><span class='va'>list.vcov</span>,
+        name.y <span class='op'>=</span> <span class='cn'>NULL</span>, name.study <span class='op'>=</span> <span class='va'>Craft2003</span><span class='op'>$</span><span class='va'>ID</span>,
+        y.all <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>,
+        y.all.se <span class='op'>=</span> <span class='va'>obj</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+<span class='co'># }</span>
 </pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
