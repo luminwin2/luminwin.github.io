@@ -1,4 +1,4 @@
-pandoc: 2.7.3
+pandoc: 2.14.0.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
@@ -6,7 +6,7 @@ articles:
   cv copy: cv copy.html
   cv: cv.html
   teach2: teach2.html
-last_built: 2021-08-25T07:11Z
+last_built: 2021-11-18T06:25Z
 urls:
   reference: https://luminwin.github.io/Lu/articles/cv.html/reference
   article: https://luminwin.github.io/Lu/articles/cv.html/articles
