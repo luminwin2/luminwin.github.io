@@ -151,6 +151,13 @@
 	url = {https://luminwin.github.io/randomForestSRC/articles/minidep.html}
 }
 
+@misc{HemantPartial,
+	author = "Hemant Ishwaran and Min Lu and Udaya B. Kogalur",
+	title = {{randomForestSRC}: partial plots vignette},
+	year = {2021},
+	url = {https://luminwin.github.io/randomForestSRC/articles/partial.html}
+}
+
 @incollection{Lu2020tree,
 	title = {Tree Variable Selection for Paired Case-Control Studies with Application to Microbiome Data}, 
 	author = {Lu, Min and Ishwaran, Hemant},
