@@ -3,11 +3,11 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   BST625: BST625.html
-  cv copy: cv copy.html
   cv: cv.html
+  home: home.html
   teach2: teach2.html
-last_built: 2021-11-18T06:25Z
+last_built: 2022-02-02T23:15Z
 urls:
-  reference: https://luminwin.github.io/Lu/articles/cv.html/reference
-  article: https://luminwin.github.io/Lu/articles/cv.html/articles
+  reference: https://luminwin.github.io/Lu/articles/home.html/reference
+  article: https://luminwin.github.io/Lu/articles/home.html/articles
 
