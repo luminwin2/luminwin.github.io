@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://luminwin.github.io/Lu/index.html</loc>
+    <loc>https://luminwin.github.io/index.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/reference/REREFACT.html</loc>
+    <loc>https://luminwin.github.io/reference/REREFACT.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/reference/covid.html</loc>
+    <loc>https://luminwin.github.io/reference/covid.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/reference/metavcov-package.html</loc>
+    <loc>https://luminwin.github.io/reference/metavcov-package.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/reference/randomForestSRC_package.html</loc>
+    <loc>https://luminwin.github.io/reference/randomForestSRC_package.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/reference/shiny.html</loc>
+    <loc>https://luminwin.github.io/reference/shiny.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/BST625.html</loc>
+    <loc>https://luminwin.github.io/articles/BST625.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/EPH705.html</loc>
+    <loc>https://luminwin.github.io/articles/EPH705.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/cv.html</loc>
+    <loc>https://luminwin.github.io/articles/cv.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/publications.html</loc>
+    <loc>https://luminwin.github.io/articles/publications.html</loc>
   </url>
 </urlset>
