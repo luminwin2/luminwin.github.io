@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/index.html</loc>
+    <loc>https://luminwin.github.io/Lu/index.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/reference/REREFACT.html</loc>
+    <loc>https://luminwin.github.io/Lu/reference/REREFACT.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/reference/covid.html</loc>
+    <loc>https://luminwin.github.io/Lu/reference/covid.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/reference/metavcov-package.html</loc>
+    <loc>https://luminwin.github.io/Lu/reference/metavcov-package.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/reference/randomForestSRC_package.html</loc>
+    <loc>https://luminwin.github.io/Lu/reference/randomForestSRC_package.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/reference/shiny.html</loc>
+    <loc>https://luminwin.github.io/Lu/reference/shiny.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/articles/BST625.html</loc>
+    <loc>https://luminwin.github.io/Lu/articles/BST625.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/articles/cv.html</loc>
+    <loc>https://luminwin.github.io/Lu/articles/cv.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/articles/home.html</loc>
+    <loc>https://luminwin.github.io/Lu/articles/publications.html</loc>
   </url>
   <url>
-    <loc>https://luminwin.github.io/Lu/articles/home.html/articles/teach2.html</loc>
+    <loc>https://luminwin.github.io/Lu/articles/teach2.html</loc>
   </url>
 </urlset>

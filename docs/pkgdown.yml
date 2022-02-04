@@ -4,10 +4,10 @@ pkgdown_sha: ~
 articles:
   BST625: BST625.html
   cv: cv.html
-  home: home.html
+  publications: publications.html
   teach2: teach2.html
-last_built: 2022-02-04T00:24Z
+last_built: 2022-02-04T21:44Z
 urls:
-  reference: https://luminwin.github.io/Lu/articles/home.html/reference
-  article: https://luminwin.github.io/Lu/articles/home.html/articles
+  reference: https://luminwin.github.io/Lu/reference
+  article: https://luminwin.github.io/Lu/articles
 
